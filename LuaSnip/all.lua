@@ -1,4 +1,4 @@
-local ls = require "luasnip"
+local ls = require("luasnip")
 local s = ls.snippet
 local t = ls.text_node
 local i = ls.insert_node
@@ -12,21 +12,44 @@ local sn = ls.snippet_node
 
 local file_pattern = "all"
 ls.add_snippets(file_pattern, {
-  s("log", {
-    t("console.log("), i(1), t(")")
-  })
+  s("cl", {
+    t("console.log("),
+    i(1),
+    t(")"),
+  }),
+})
+ls.add_snippets(file_pattern, {
+  s(
+    {
+      trig = "mdx",
+      desc = "mdx metadata",
+    },
+    fmt(
+      [[
+---
+description: '{}'
+---
+  ]],
+      {
+        -- i(1) is at nodes[1], i(2) at nodes[2].
+        i(1, ""),
+      }
+    )
+  ),
 })
 
 -- 快速导包
-ls.add_snippets("typescriptreact",{
+ls.add_snippets("typescriptreact", {
   s("sty", {
-    t("import styles from \"@/app/styles/"),i(1),t("\"")
-  })
+    t('import styles from "@/app/styles/'),
+    i(1),
+    t('"'),
+  }),
 })
-ls.add_snippets("typescriptreact",{
+ls.add_snippets("typescriptreact", {
   s("sty1", {
-    t("import styles from \"@/app/(dashboard)/styles/"),i(1),t("\"")
-  })
+    t('import styles from "@/app/(dashboard)/styles/'),
+    i(1),
+    t('"'),
+  }),
 })
-
-

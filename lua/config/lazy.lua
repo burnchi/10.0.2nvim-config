@@ -21,6 +21,10 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
     { import = "plugins/code" },
+    -- 快速加html标签和括号等
+    { import = "lazyvim.plugins.extras.coding.mini-surround" },
+    -- 保存格式化代码
+    { import = "lazyvim.plugins.extras.formatting.prettier" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
