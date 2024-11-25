@@ -3,6 +3,8 @@ function _G.set_terminal_keymaps()
   -- exit terminal mode
   vim.keymap.set("t", "<esc>", [[<C-\><C-n>]])
   vim.keymap.set("t", "jk", [[<C-\><C-n>]])
+  vim.keymap.set("t", "<c-h>", [[<C-\><C-n><C-w>h]])
+  vim.keymap.set("t", "<c-k>", [[<C-\><C-n><C-w>k]])
 end
 
 -- terminal mode bind keymap
@@ -23,9 +25,16 @@ return {
     },
   },
   opts = {
-    size = 16,
+    size = function(term)
+      if term.direction == "horizontal" then
+        return 20
+      elseif term.direction == "vertical" then
+        return vim.o.columns * 0.4
+      end
+    end,
     open_mapping = [[<C-\>]],
-    direction = "horizontal",
+    -- direction = "horizontal",
+    direction = "vertical",
     -- is same as colorscheme
     shade_terminals = false,
     insert_mappings = true,

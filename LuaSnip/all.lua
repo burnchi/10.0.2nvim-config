@@ -28,11 +28,13 @@ ls.add_snippets(file_pattern, {
       [[
 ---
 description: '{}'
+publishedAt: '{}'
 ---
   ]],
       {
-        -- i(1) is at nodes[1], i(2) at nodes[2].
+        -- 插入点和默认值
         i(1, ""),
+        i(3, "2024-1-20"),
       }
     )
   ),

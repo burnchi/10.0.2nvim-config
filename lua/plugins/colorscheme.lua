@@ -19,6 +19,7 @@ return {
     opts = {
 
       commentStyle = { italic = false },
+      -- transparent = true,
     },
   },
 

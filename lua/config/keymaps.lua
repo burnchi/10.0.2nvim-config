@@ -44,14 +44,14 @@ Map("c", "jk", "<c-c>")
 
 ------------- 插件快捷键-------------
 -- fittencode
--- Map("i", "<a-j>", function()
---   require("fittencode").accept_all_suggestions()
--- end, { desc = "accept_all_suggestions" })
---
--- Map("i", "<a-k>", function()
---   require("fittencode").dismiss_suggestions()
--- end, { desc = "dismiss_all_suggestions" })
---
--- Map("n", "<leader>fe", "<cmd>Fitten enable_completions<cr>", { desc = "enable fittencode", silent = false })
--- Map("n", "<leader>fd", "<cmd>Fitten disable_completions<cr>", { desc = "close fittencode", silent = false })
--- Map("n", "<leader>fc", "<cmd>Fitten start_chat<cr>", { desc = "start_chat", silent = false })
+Map("i", "<a-j>", function()
+  require("fittencode").accept_all_suggestions()
+end, { desc = "accept_all_suggestions" })
+
+Map("i", "<a-k>", function()
+  require("fittencode").dismiss_suggestions()
+end, { desc = "dismiss_all_suggestions" })
+
+Map("n", "<leader>fe", "<cmd>Fitten enable_completions<cr>", { desc = "enable fittencode", silent = false })
+Map("n", "<leader>fd", "<cmd>Fitten disable_completions<cr>", { desc = "close fittencode", silent = false })
+Map("n", "<leader>fc", "<cmd>Fitten start_chat<cr>", { desc = "start_chat", silent = false })

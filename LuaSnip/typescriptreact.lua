@@ -66,9 +66,7 @@ ls.add_snippets(file_pattern, {
     },
     fmt(
       [[
-    ({}) => {{
-      {}
-    }}
+    ({}) => {}
   ]],
       {
         -- choice_node
